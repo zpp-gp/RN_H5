@@ -1,0 +1,9 @@
+1 H5 与RN的交互
+
+H5_demo 是H5 页面，node+express
+
+
+app_demo 是RN项目
+
+1 H5 可以通过window.postMessage 与RN实时通信
+2 RN 与H5 通信，采用JS注入的方式

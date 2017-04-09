@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5 与RN 接口调用集成</title>
+</head>
+<script>
+    function getMoblie() {
+        alert(window.RNObject.mobile);
+    }
+    function copy() {
+        var params = {
+            type: "copy",
+            content: "内容"
+        };
+        if (typeof window.postMessage == 'function') {
+            window.postMessage(JSON.stringify(params));
+        }
+    }
+</script>
+<body>
+<div>
+    <a onclick="getMoblie()">
+     <span>
+        1.获取手机号
+    </span>
+    </a>
+</div>
+<div>
+    <a onclick="copy()">
+        <span>
+          2.复制功能
+        </span>
+    </a>
+</div>
+</body>
+</html>
